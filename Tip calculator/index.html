@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="mainBox">
+      <div class="box1">
+        <h2>Tip Calculator</h2>
+        <form action="">
+          <label for="total_amount">Bill Amount</label>
+          <input
+            type="text"
+            id="total_amount"
+            placeholder="Enter the total amount payable"
+            value=""
+          />
+          <label for="Tip_percent">Tip Percent</label>
+          <select name="tip_option" id="tip_option">
+            <option value="20% for great service">20% for great service</option>
+            <option value="15% for great service">
+              15% for better service
+            </option>
+            <option value="10% for great service">10% for good service</option>
+            <option value="5% for conditional service">
+              5% for conditional service"
+            </option>
+            <option value="0% for very bad service">
+              0% for very bad service
+            </option>
+          </select>
+        </form>
+        <div class="tip_amount">
+          <p>Total Tip Amount</p>
+          <span id="total_tip_amount"></span>
+        </div>
+        <div class="total_payable_account">
+          <p>Total Payable Ammount</p>
+          <span id="total_amount_payable"></span>
+        </div>
+        <div class="no_of_persons">
+          <p>Number of persons:</p>
+          <form action="">
+            <label for="Yes">Yes</label>
+            <input type="radio" id="Yes" name="Yes" value="Yes" />
+            <label for="No">No</label>
+            <input type="radio" id="No" name="No" value="No" />
+          </form>
+          <button type="submit" id="btn">Submit</button>
+          <span id="per_person_tip"></span>
+        </div>
+      </div>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
