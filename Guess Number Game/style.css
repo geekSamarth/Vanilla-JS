@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* adding basic style to the webpage */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* declaring root properties in the webpage     */
+:root {
+  --background-color-1: #560bad;
+  --background-color-2: #b5179e;
+  --background-color-3: #3a0ca3;
+  --content-box-bg-color: rgba(206, 212, 218, 0.38);
+  --text-color: #0d1b2a;
+}
+
+/* adding styles to the different elements of the webpage */
+
+.mainBox {
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--background-color-1),
+    var(--background-color-2),
+    var(--background-color-3)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: var(--text-color);
+}
+.content {
+  min-height: 80vh;
+  width: 35vw;
+  background-color: var(--content-box-bg-color);
+  margin: auto;
+  border-radius: 10px;
+  border: 1px solid var(--content-box-bg-color);
+  box-shadow: 1px 1px 6px 3px var(--content-box-bg-color);
+  padding: 10px;
+}
+.content .game_heading {
+  height: 8vh;
+  background-color: var(--background-color-1);
+  padding-top: 7px;
+  border-radius: 15px;
+  text-align: center;
+  margin: 5px 0 15px 0;
+}
+.content .gameRules{
+    line-height: 1.7;
+    padding: 2px 5px 10px 7px;
+    font-weight: 600;
+}
+.gameRules h3{
+    text-decoration:underline;
+}
+.content .gameRules .list{
+    list-style-position: inside;
+    list-style-type: disc;
+}
+.content .game-box {
+  margin: 10px 0 20px 0;
+  text-align: center;
+}
+.game-box label{
+    display: block;
+    font-size: 20px;
+    margin: 15px 0;
+}
+.game-box input{
+    display: block;
+    width: 80px;
+    margin: 15px auto;
+    padding: 20px;
+    border: none;
+    font-size: 22px;
+    text-align: center;
+    background-color: var(--content-box-bg-color);
+    border-radius: 20px;
+}
+.game-box input:focus{
+    outline: none;
+}
+.game-box #btn{
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    background-color: var(--background-color-2);
+    color: var(--text-color);
+    font-weight: 600;
+    margin: 10px 0 20px 0;
+    cursor: pointer;
+}
+.game-box #btn:hover{
+    background-color: var(--background-color-1);
+    color: var(--content-box-bg-color);
+    transition: all 0.1s ease-in;
+}
+.guessResult{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin: 10px 0 20px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+#result{
+    font-size: 24px;
+    font-weight: 600;
+}

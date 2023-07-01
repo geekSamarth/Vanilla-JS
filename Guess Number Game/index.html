@@ -8,7 +8,29 @@
 </head>
 <body>
     <main class="mainBox">
-        
+        <div class="content">
+            <div class="game_heading">
+                <h1>Guess The Number Game</h1>
+            </div>
+            <div class="gameRules">
+                <h3>Game Rules:</h3> 
+                <ul class="list">
+                    <li>Player have only 10 chances to guess the number.</li>
+                    <li>We will let you know whether the guessed number is equal to, less than or greater than generated random number.</li>
+                </ul>
+            </div>
+            <div class="game-box">
+                <h2>Note: Choose any number between 1-100</h2>
+                <label for="guessField">Enter your guess in the box</label>
+                <input type="text" id="guessField" value="">
+                <button id="btn" type="submit">Submit Guess</button>
+                <div class="guessResult">
+                    <p>Chance Left: <span id="chanceLeft"></span></p>
+                    <p>Guess Value Was: <span id="guessValue"></span></p>
+                </div>
+                <span id="result"></span>
+            </div>
+        </div>
     </main>
 
     <script src="./main.js"></script>
