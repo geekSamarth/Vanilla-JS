@@ -36,7 +36,7 @@
   color: var(--text-color);
 }
 .content {
-  min-height: 80vh;
+  min-height: 60vh;
   width: 35vw;
   background-color: var(--content-box-bg-color);
   margin: auto;
@@ -52,6 +52,7 @@
   border-radius: 15px;
   text-align: center;
   margin: 5px 0 15px 0;
+  font-size: 15px;
 }
 .content .gameRules{
     line-height: 1.7;
@@ -116,3 +117,6 @@
     font-size: 24px;
     font-weight: 600;
 }
+
+/* adding responsiveness to the webpage  */
+
