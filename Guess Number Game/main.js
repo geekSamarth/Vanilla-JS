@@ -6,53 +6,50 @@ const result = document.querySelector("#result");
 
 // function to generate the random number between 1 and 100.
 let randomNumber = Math.floor(Math.random() * 100 + 1);
-var count =10;
 
+const count = {
+  counter: 10,
+};
+chanceLeft.innerHTML = count.counter;
 
 // function for checking the values.
 function guessNumber() {
-  
   console.log(randomNumber);
+  let inputValue = guessField.value;
 
+  if (count.counter > 0) {
+    if (inputValue === randomNumber) {
+      result.innerHTML = `YaY!! You won the game`;
+      guessValue.innerHTML = `Equal.`;
+      chanceLeft.innerHTML = count.counter;
+      console.log(inputValue);
+      inputValue = "";
+      console.log(inputValue);
+    } else if (inputValue >= randomNumber) {
+      count.counter--;
+      chanceLeft.innerHTML = count.counter;
+      guessValue.innerHTML = `High`;
+      console.log(inputValue);
 
-  if(count > 0)
-  {
-    while (count > 0) {
-        let inputValue = guessField.value;
-    
-        if (inputValue === randomNumber) {
-          result.innerHTML = `YaY!! You won the game`;
-          count--;
-          guessValue.innerHTML = `Equal.`;
-          chanceLeft.innerHTML = `${count}`;
-          inputValue = "";
-        } else if (inputValue >= randomNumber) {
-          count--;
-          chanceLeft.innerHTML = `${count}`;
-          guessValue.innerHTML = `High`;
-          inputValue = "";
-
-        } else {
-          if(count >0)
-          {
-            count--;
-
-          }
-          chanceLeft.innerHTML = `${count}`;
-          guessValue.innerHTML = `Low`;
-          inputValue = "";
-
-        }
+      inputValue = "";
+      console.log(inputValue);
+    } else {
+      if (count.counter > 0) {
+        count.counter--;
       }
-  }
-  else
-  {
-    result.innerHTML = `OOPS!! You Loss. Try again!`
+      chanceLeft.innerHTML = count.counter;
+      guessValue.innerHTML = `Low`;
+      console.log(inputValue);
+
+      guessField.value = "";
+      console.log(inputValue);
+    }
+  } else {
+    result.innerHTML = `OOPS!! You Loss. Try again!`;
   }
 }
 
-
-submit.addEventListener('click',function(e){
-    e.preventDefault();
-    guessNumber();
-})
+submit.addEventListener("click", function (e) {
+  e.preventDefault();
+  guessNumber();
+});
