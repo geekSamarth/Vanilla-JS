@@ -24,7 +24,6 @@ count.counter--;
 function guessNumber() {
   totalGuess++;
   let inputValue = guessField.value;
-  console.log(randomNumber);
   if (count.counter > 0) {
     if (inputValue == randomNumber) {
       guessValue.innerHTML = `Equal`;
@@ -46,7 +45,6 @@ function guessNumber() {
   } else {
     chanceLeft.innerHTML = `${count.counter}`;
     result.innerHTML = `OOPS!! You Lose, Try Again!`;
-    count.counter--;
     guessField.value = "";
   }
 }

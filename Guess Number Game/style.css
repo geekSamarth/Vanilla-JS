@@ -36,8 +36,6 @@
   color: var(--text-color);
 }
 .content {
-  min-height: 60vh;
-  width: 35vw;
   background-color: var(--content-box-bg-color);
   margin: auto;
   border-radius: 10px;
@@ -46,77 +44,108 @@
   padding: 10px;
 }
 .content .game_heading {
-  height: 8vh;
   background-color: var(--background-color-1);
-  padding-top: 7px;
   border-radius: 15px;
   text-align: center;
   margin: 5px 0 15px 0;
-  font-size: 15px;
+  padding: 5px 3px;
 }
-.content .gameRules{
-    line-height: 1.7;
-    padding: 2px 5px 10px 7px;
-    font-weight: 600;
+.content .gameRules {
+  line-height: 1.7;
+  padding: 2px 5px 10px 7px;
+  font-weight: 600;
 }
-.gameRules h3{
-    text-decoration:underline;
+.gameRules h3 {
+  text-decoration: underline;
 }
-.content .gameRules .list{
-    list-style-position: inside;
-    list-style-type: disc;
+.content .gameRules .list {
+  list-style-position: inside;
+  list-style-type: disc;
 }
 .content .game-box {
   margin: 10px 0 20px 0;
   text-align: center;
 }
-.game-box label{
-    display: block;
-    font-size: 20px;
-    margin: 15px 0;
+.game-box label {
+  display: block;
+  font-size: 20px;
+  margin: 15px 0;
 }
-.game-box input{
-    display: block;
-    width: 80px;
-    margin: 15px auto;
-    padding: 20px;
-    border: none;
-    font-size: 22px;
-    text-align: center;
-    background-color: var(--content-box-bg-color);
-    border-radius: 20px;
+.game-box input {
+  display: block;
+  width: 80px;
+  margin: 15px auto;
+  padding: 20px;
+  border: none;
+  font-size: 22px;
+  text-align: center;
+  background-color: var(--content-box-bg-color);
+  border-radius: 20px;
 }
-.game-box input:focus{
-    outline: none;
+.game-box input:focus {
+  outline: none;
 }
-.game-box #btn{
-    padding: 12px 25px;
-    border: none;
-    border-radius: 25px;
-    font-size: 18px;
-    background-color: var(--background-color-2);
-    color: var(--text-color);
-    font-weight: 600;
-    margin: 10px 0 20px 0;
-    cursor: pointer;
+.game-box #btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  background-color: var(--background-color-2);
+  color: var(--text-color);
+  font-weight: 600;
+  margin: 10px 0 20px 0;
+  cursor: pointer;
 }
-.game-box #btn:hover{
-    background-color: var(--background-color-1);
-    color: var(--content-box-bg-color);
-    transition: all 0.1s ease-in;
+.game-box #btn:hover {
+  background-color: var(--background-color-1);
+  color: var(--content-box-bg-color);
+  transition: all 0.1s ease-in;
 }
-.guessResult{
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    margin: 10px 0 20px 0;
-    font-size: 18px;
-    font-weight: 600;
+.guessResult {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin: 10px 0 20px 0;
+  font-size: 18px;
+  font-weight: 600;
 }
-#result{
-    font-size: 24px;
-    font-weight: 600;
+#result {
+  font-size: 24px;
+  font-weight: 600;
 }
 
 /* adding responsiveness to the webpage  */
 
+@media screen and (max-width: 450px) {
+  .content .game_heading {
+    font-size: 14px;
+  }
+  .content .gameRules {
+    font-size: 13px;
+  }
+  .content .game-box h2 {
+    font-size: 19px;
+  }
+  .content .gameRules label {
+    font-size: 17px;
+  }
+  #result {
+    font-size: 19px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .content {
+    width: 70vw;
+  }
+  .guessResult {
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 950px) {
+  .content {
+    width: 50vw;
+  }
+  .guessResult {
+    justify-content: space-around;
+  }
+}
