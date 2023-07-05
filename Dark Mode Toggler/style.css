@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+:root{
+    --light-mode-bg-color:#e9edc9;
+    --dark-mode-bg-color:#1b263b;
+    --dark-mode-text-color:#dde5b6;
+    --dark-mode-button-color:#7209b7;
+}
+.mainBox{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-mode-bg-color);
+    transition: all 0.2s ease-in;
+}
+.themeButton {
+    text-align: right;
+    margin: 10px 40px;
+}
+.themeButton img{
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+.heading{
+    padding: 20px;
+    margin: 5px 0 30px 0;
+}
+.heading h1{
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+.heading p{
+    font-size: 22px;
+}
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+.box{
+    width: 25vw;
+    padding: 10px;
+    border-radius: 10px;
+}
+.box p{
+    font-size: 22px;
+}
+.box button{
+    padding: 10px 15px;
+    margin: 30px 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: var(--dark-mode-button-color);
+    color: var(--dark-mode-text-color);
+    cursor: pointer;
+}
+
+.dark{
+    background-color:var(--dark-mode-bg-color);
+    color: var(--dark-mode-text-color);
+    transition: all 0.2s ease-in;
+}
+
+/* adding media queries to the webpage */
+
+@media screen and (max-width:540px) {
+    .heading h1{
+        font-size: 30px;
+    }
+    .boxes{
+        flex-direction: column;
+    }
+    .box{
+        width: 90vw;
+    }
+    
+}
