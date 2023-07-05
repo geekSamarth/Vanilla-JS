@@ -5,7 +5,36 @@
     box-sizing: border-box;
     overflow: hidden;
 }
+:root{
+    /* light mode colors */
+    --main-bg-color:#EFF6E0;
+    --light-text-color:#212529;
+    --button-color:#B5179E;
+    --button-hover-color:#7209B7;
+
+    /* dark mode colors */
+    --main-dark-bg-color:#01161E;
+    --primary-text-color:#DEE2E6;
+    --secondary-text-color:#52B788;
+}
 body{
     font-family: 'Inter', sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--light-text-color);
+}
+header{
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.theme img{
+    width: 25px;
+    cursor: pointer;
 }
 
