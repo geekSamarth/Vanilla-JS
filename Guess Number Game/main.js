@@ -28,7 +28,7 @@ function guessNumber() {
     if (inputValue == randomNumber) {
       guessValue.innerHTML = `Equal`;
       result.innerHTML = `YAY!! You Won The Match in ${totalGuess} Guesses`;
-      chanceLeft.innerHTML = `${count.counter};`;
+      chanceLeft.innerHTML = `${count.counter}`;
       count.counter--;
       guessField.value = "";
     } else if (inputValue >= randomNumber) {
