@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+body {
+  background: #edf2f7;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 500px;
+  max-width: 90%;
+}
+.container input {
+  width: 300px;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+.container #trigger {
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
