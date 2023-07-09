@@ -11,6 +11,7 @@
     --light-text-color:#212529;
     --button-color:#B5179E;
     --button-hover-color:#7209B7;
+    --button-text-color:#fff;
 
     /* dark mode colors */
     --main-dark-bg-color:#01161E;
@@ -28,6 +29,7 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: #43a8b9;
 }
 .logo{
     font-size: 24px;
@@ -42,4 +44,5 @@ header{
     background: #000;
     color: rgb(16, 241, 166);
 }
+
 
