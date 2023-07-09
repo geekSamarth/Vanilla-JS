@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OTP Generator</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <main class="otp_wrapper">
-        <div class="otp_container">
-            
+      <div class="otp_container">
+        <h1>OTP Generator</h1>
+        <div class="length">
+            <label for="otpLength">OTP Length:</label>
+            <input type="text" id="otpLength" value="">
         </div>
+        <div class="result">
+          <span id="otp"></span>
+        </div>
+        <div class="submit">
+          <button class="trigger">Get OTP</button>
+        </div>
+      </div>
     </main>
     <script src="./main.js"></script>
-</body>
+  </body>
 </html>

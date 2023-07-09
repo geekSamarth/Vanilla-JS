@@ -1,5 +1,89 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #e9ecef;
+  --secondary-color: #6c757d;
+  --text-color: #f8f9fa;
+  --button-color: #dee2e6;
+  --button-hover-color: #adb5bd;
+}
+.otp_wrapper {
+  min-height: 100vh;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.otp_container {
+  width: 450px;
+  max-width: 90%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: var(--secondary-color);
+  box-shadow: 2px 2px 5px 2px #343a40;
+}
+h1 {
+  font-size: 40px;
+  text-decoration: underline;
+  word-spacing: 10px;
+  margin-bottom: 20px;
+}
+.length {
+  margin: 40px 0 30px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+.length label {
+  font-size: 26px;
+}
+.length input {
+  width: 90px;
+  padding: 6px 10px;
+  font-size: 22px;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+}
+.length input:focus {
+  outline: none;
+}
+.result {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.result #otp {
+  font-size: 40px;
+}
+.submit {
+  margin: 20px 0;
+}
+.trigger {
+  padding: 10px 40px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--button-color);
+  transition: all 0.3s ease-in;
+  outline: none;
+}
+.trigger:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* adding media query */
+
+@media screen and (max-width: 350px) {
+  h1 {
+    font-size: 34px;
+  }
 }
