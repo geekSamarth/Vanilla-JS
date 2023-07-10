@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+section{
+    background-color: bisque;
+}
+header{
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 234, 221, 0.8);
+}
+.logo{
+    font-size: 26px;
+    font-weight: 600;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+nav ul li{
+    list-style-type: none;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 3px 10px;
+    color: #000;
+}
+nav ul li a:hover{
+    border-bottom: 2px solid black;
+    transition: all 0.1s ease-in;
+}
