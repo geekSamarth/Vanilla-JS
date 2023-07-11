@@ -24,12 +24,14 @@ body{
     background-color: var(--main-bg-color);
     color: var(--light-text-color);
 }
+
+/* adding styles to the header portion */
+
 header{
-    height: 60px;
+    height: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #43a8b9;
 }
 .logo{
     font-size: 24px;
@@ -45,4 +47,15 @@ header{
     color: rgb(16, 241, 166);
 }
 
+/* adding styles to the main container box */
+
+.wrapper{
+    min-height: calc(100vh - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainContainer{
+    width: 620px;
+}
 
