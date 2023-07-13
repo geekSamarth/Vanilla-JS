@@ -1,48 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-:root{
-    /* light mode colors */
-    --main-bg-color:#EFF6E0;
-    --box-color:rgba(33, 37, 41, 0.82);
-    --button-color:#B5179E;
-    --button-hover-color:#7209B7;
-    --text-color:#faf3dd;
+:root {
+  --main-bg-color: #eff6e0;
+  --box-color: rgba(33, 37, 41, 0.82);
+  --button-color: #b5179e;
+  --button-hover-color: #7209b7;
+  --text-color: #faf3dd;
 }
-.tip_wrapper{
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--main-bg-color);
+.tip_wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-bg-color);
 }
-.tip_container{
-    width: 620px;
-    max-width: 90%;
-    background-color: var(--box-color);
-    border-radius: 8px;
-    height: 400px;
-    padding: 5px;
-    color: var(--text-color);
-    display: flex;
-    justify-content: space-between;
+.tip_container {
+  width: 620px;
+  max-width: 90%;
+  background-color: var(--box-color);
+  border-radius: 8px;
+  padding: 5px;
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
 }
-.tip_data{
-    width: 280px;
-    max-width: 90%;
-    padding: 10px;
+.tip_data {
+  width: 270px;
+  max-width: 90%;
+  padding: 10px;
 }
-.tip_data label{
-    display: block;
+.tip_data label {
+  font-size: 19px;
+  display: block;
+  margin: 12px 0;
 }
-.line{
-    width:3px;
-    height: auto;
-    background-color: var(--main-bg-color);
-    border-radius: 50%;
-    opacity: 0.65;
-    margin: 40px 0px;
+.tip_data input {
+  border: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: var(--main-bg-color);
+}
+.tip_data input:focus {
+  outline: none;
+}
+.tip_option select {
+  font-size: 16px;
+  padding: 5px 10px;
+  background-color: var(--main-bg-color);
+}
+.tip_option select:focus {
+  outline: none;
+}
+.tip_option option {
+  background-color: var(--box-color);
+  color: var(--text-color);
+}
+.bill_Splitting label {
+  display: inline;
+  margin-left: 20px;
+}
+#yesSplit,
+#noSplit {
+  accent-color: var(--button-hover-color);
+  margin-left: 4px;
+}
+#yesSplit:focus,
+#noSplit:focus {
+  transform: scale(1.5);
+  transition: all 0.2s ease-in;
+}
+.personInput {
+  display: none;
+}
+.submit {
+  margin: 20px 0;
+}
+.calculateTip {
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 20px;
+  border: none;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 25px;
+}
+.calculateTip:hover {
+  background-color: var(--button-hover-color);
+  transition: all 0.2s ease-in;
+}
+.line {
+  width: 3px;
+  max-width: 90%;
+  height: auto;
+  background-color: var(--main-bg-color);
+  border-radius: 50%;
+  opacity: 0.65;
+  margin: 40px 0px;
+  display: none;
+}
+.calculated_data {
+  width: 270px;
+  max-width: 90%;
+  padding: 10px;
+  display: none;
 }
