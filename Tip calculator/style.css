@@ -3,14 +3,46 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    overflow: hidden;
 }
 :root{
     /* light mode colors */
     --main-bg-color:#EFF6E0;
-    --light-text-color:#212529;
+    --box-color:rgba(33, 37, 41, 0.82);
     --button-color:#B5179E;
     --button-hover-color:#7209B7;
-    --button-text-color:#fff;
-
+    --text-color:#faf3dd;
+}
+.tip_wrapper{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg-color);
+}
+.tip_container{
+    width: 620px;
+    max-width: 90%;
+    background-color: var(--box-color);
+    border-radius: 8px;
+    height: 400px;
+    padding: 5px;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+}
+.tip_data{
+    width: 280px;
+    max-width: 90%;
+    padding: 10px;
+}
+.tip_data label{
+    display: block;
+}
+.line{
+    width:3px;
+    height: auto;
+    background-color: var(--main-bg-color);
+    border-radius: 50%;
+    opacity: 0.65;
+    margin: 40px 0px;
 }
