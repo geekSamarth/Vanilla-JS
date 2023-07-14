@@ -12,7 +12,7 @@
         <div class="tip_data">
           <form action="">
             <label for="bill_amount" class="bill_amount">Bill Amount:</label>
-            <input type="text" id="billAmount">
+            <input type="text" id="billAmount" required>
             <div class="tip_option">
               <label for="tip">Tip Options</label>
               <select name="Tip" id="tip_selection">
@@ -42,7 +42,22 @@
         </div>
         <div class="line"></div>
         <div class="calculated_data">
-          
+          <div class="total_tip">
+            <label>Total Tip Amount</label>
+            <span id="totalTipResult">0</span>
+          </div>
+          <div class="person_tip">
+            <label>Tip Per Person</label>
+            <span id="personTipResult">0</span>
+          </div>
+          <div class="total_bill">
+            <label>Total Bill Amount</label>
+            <span id="totalBillResult">0</span>
+          </div>
+          <div class="person_bill">
+            <label>Bill Per Person</label>
+            <span id="personBillResult">0</span>
+          </div>
         </div>
       </div>
     </main>

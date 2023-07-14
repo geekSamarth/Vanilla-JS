@@ -16,10 +16,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--main-bg-color);
+  background-color: #a9c9ff;
+  background-image: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%);
 }
 .tip_container {
-  width: 620px;
+  width: 570px;
   max-width: 90%;
   background-color: var(--box-color);
   border-radius: 8px;
@@ -52,6 +53,7 @@
   font-size: 16px;
   padding: 5px 10px;
   background-color: var(--main-bg-color);
+  margin-bottom: 10px;
 }
 .tip_option select:focus {
   outline: none;
@@ -93,7 +95,7 @@
 }
 .calculateTip:hover {
   background-color: var(--button-hover-color);
-  transition: all 0.2s ease-in;
+  transition: all 0.2s linear;
 }
 .line {
   width: 3px;
@@ -103,11 +105,32 @@
   border-radius: 50%;
   opacity: 0.65;
   margin: 40px 0px;
-  display: none;
+  /* display: none; */
 }
 .calculated_data {
   width: 270px;
   max-width: 90%;
   padding: 10px;
-  display: none;
+  text-align: center;
+  /* display: none; */
+}
+.calculated_data label {
+  display: block;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 15px 0;
+}
+.calculated_data span {
+  font-size: 26px;
+}
+.person_tip,
+.person_bill {
+  opacity: 0;
+}
+
+@media screen and (max-width:450px) {
+  .tip_container{
+    flex-direction: column;
+  }
+  
 }
