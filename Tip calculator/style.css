@@ -10,6 +10,7 @@
   --button-color: #b5179e;
   --button-hover-color: #7209b7;
   --text-color: #faf3dd;
+  --result-box-color: #004346;
 }
 .tip_wrapper {
   min-height: 100vh;
@@ -20,22 +21,19 @@
   background-image: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%);
 }
 .tip_container {
-  width: 570px;
   max-width: 90%;
   background-color: var(--box-color);
   border-radius: 8px;
   padding: 5px;
   color: var(--text-color);
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
 }
 .tip_data {
-  width: 270px;
-  max-width: 90%;
   padding: 10px;
 }
 .tip_data label {
-  font-size: 19px;
+  font-size: 24px;
   display: block;
   margin: 12px 0;
 }
@@ -46,11 +44,17 @@
   border-radius: 4px;
   background-color: var(--main-bg-color);
 }
+.personInput input,
+#billAmount {
+  width: 100%;
+}
 .tip_data input:focus {
   outline: none;
 }
 .tip_option select {
   font-size: 16px;
+  width: 100%;
+  border-radius: 4px;
   padding: 5px 10px;
   background-color: var(--main-bg-color);
   margin-bottom: 10px;
@@ -80,7 +84,7 @@
   display: none;
 }
 .submit {
-  margin: 20px 0;
+  margin: 20px 0 10px 0;
 }
 .calculateTip {
   display: block;
@@ -105,14 +109,13 @@
   border-radius: 50%;
   opacity: 0.65;
   margin: 40px 0px;
-  /* display: none; */
 }
 .calculated_data {
-  width: 270px;
-  max-width: 90%;
+  background-color: var(--result-box-color);
   padding: 10px;
   text-align: center;
-  /* display: none; */
+  display: none;
+  border-radius: 8px;
 }
 .calculated_data label {
   display: block;
@@ -127,10 +130,25 @@
 .person_bill {
   opacity: 0;
 }
-
-@media screen and (max-width:450px) {
-  .tip_container{
+/* adding media query for small screen */
+@media screen and (max-width: 540px) {
+  .tip_container {
     flex-direction: column;
+    width: 95%;
+    margin: 25px 0;
   }
-  
+  .tip_data {
+    width: 100%;
+  }
+  .line {
+    width: 90%;
+    margin: 0 auto;
+    height: 3px;
+  }
+  .calculated_data {
+    width: 100%;
+  }
+  .calculated_data label {
+    font-size: 24px;
+  }
 }

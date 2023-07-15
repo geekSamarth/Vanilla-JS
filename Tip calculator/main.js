@@ -13,8 +13,8 @@ const totalTipResult = document.querySelector("#totalTipResult");
 const personTipResult = document.querySelector("#personTipResult");
 const totalBillResult = document.querySelector("#totalBillResult");
 const personBillResult = document.querySelector("#personBillResult");
-
-// function to calculate the total tip 
+const calculatedData = document.querySelector(".calculated_data");
+// function to calculate the total tip
 
 function calculateTotalTip() {
   const res = Math.round(
@@ -23,7 +23,7 @@ function calculateTotalTip() {
   return res;
 }
 
-// function to calculate the per person tip 
+// function to calculate the per person tip
 
 function calculatePersonTip() {
   const res = Math.round(
@@ -33,23 +33,24 @@ function calculatePersonTip() {
   return res;
 }
 
-// function to calculate the total bill amount 
+// function to calculate the total bill amount
 
 function calculateTotalBill() {
- const tip = calculateTotalTip();
- const res = Number(billAmount.value)+tip;
+  const tip = calculateTotalTip();
+  const res = Number(billAmount.value) + tip;
   return res;
 }
 
-// function to calculate the per person bill amount 
+// function to calculate the per person bill amount
 
 function calculatePersonBill() {
   const tip = calculateTotalBill();
-  const res = tip / (Number(numberOfPeople.value));
+  const res = tip / Number(numberOfPeople.value);
   return res;
 }
 // function for calculating the tip
 function tipCalculation() {
+  calculatedData.style.display = "block";
   calculateTotalTip();
   const res1 = calculateTotalTip();
   totalTipResult.innerHTML = `Rs. ${res1}`;
@@ -62,9 +63,9 @@ function tipCalculation() {
   calculatePersonBill();
   const res4 = calculatePersonBill();
   personBillResult.innerHTML = `Rs. ${res4}`;
-  billAmount.value="";
-  tip_selection.value="";
-  numberOfPeople.value="";
+  billAmount.value = "";
+  tip_selection.value = "";
+  numberOfPeople.value = "";
 }
 
 // logic for getting the value of radio buttons for yes and no
@@ -82,6 +83,9 @@ function noSplitting() {
     person_bill.style.opacity = "0";
   }
 }
+
+// adding eventlistener on the radio buttons
+
 yesSplit.addEventListener("click", function () {
   yesSplitting();
 });
